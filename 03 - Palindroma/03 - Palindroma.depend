@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1663830490 source:c:\users\e.pizzorno.2293\desktop\sistemi-quarta\03 - palindroma\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

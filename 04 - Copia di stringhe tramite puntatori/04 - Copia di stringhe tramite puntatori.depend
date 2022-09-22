@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1663831632 source:c:\users\e.pizzorno.2293\desktop\sistemi-quarta\04 - copia di stringhe tramite puntatori\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -21,6 +21,7 @@ int main()
 
     //stampo contenuto di n
     printf("\nContenuto di n: (classico)%d - (puntatore)%d", n, *p); //con *p mi stampa 8 perchè c'è il contenuto di n
+    n=6;
     *p = 5;
     printf("\nContenuto di n: (classico)%d - (puntatore)%d", n, *p); //ora entrambe diventano 8 perchè sto lavorando sulla stessa cella
     return 0;

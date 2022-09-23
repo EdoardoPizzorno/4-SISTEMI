@@ -9,7 +9,7 @@ int main()
     char *ps1, *ps2;
 
     printf("Inserisci stringa: ");
-    scanf("%s",s1);
+    gets(s1);
 
     ps1=s1;
     ps2=s2;

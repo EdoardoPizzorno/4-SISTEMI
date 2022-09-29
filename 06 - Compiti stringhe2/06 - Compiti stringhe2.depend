@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1664437099 source:c:\users\e.pizzorno.2293\desktop\sistemi-quarta\06 - compiti stringhe2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

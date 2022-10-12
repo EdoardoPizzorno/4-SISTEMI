@@ -22,8 +22,8 @@ int menu(){
 void cifraturaSemplice(char *s, int n);
 void cifraturaCesare(char *s, char *key);
 void visualizzaRicorrenze(char *s);
-void anagramma(char *s, char *s2);
-void hertzianamenteCompatibili(char *s, char *s2);
+int anagramma(char *s, char *s2);
+int hertzianamenteCompatibili(char *s, char *s2);
 
 int main()
 {
@@ -73,7 +73,8 @@ int main()
             gets(s);
             printf("Inserisci seconda stringa: ");
             gets(s2);
-            anagramma(s,s2);
+            if(anagramma(s,s2)==0) printf("\nNo anagramma");
+            else printf("\nAnagramma");
             break;
         case 5:
             getchar();
@@ -81,7 +82,8 @@ int main()
             gets(s);
             printf("Inserisci seconda stringa: ");
             gets(s2);
-            hertzianamenteCompatibili(s,s2);
+            if(hertzianamenteCompatibili(s,s2)==0) printf("\nNo compatibili");
+            else printf("\nCompatibili");
             break;
         }
         fflush(stdin);
@@ -91,27 +93,87 @@ int main()
     printf("Programma terminato...");
     return 0;
 }
-void hertzianamenteCompatibili(char *s, char *s2){
+int hertzianamenteCompatibili(char *s1, char *s2){
+    int lenS1 = 0, lenS2 = 0;
+    int i, ret;
 
+    for(; *(s1+lenS1) != '\0'; lenS1++);
+    for(; *(s2+lenS2) != '\0'; lenS2++);
+    if (lenS1 != lenS2)
+        ret = 0; // Se lunghezza diversa
+    else{
+        // Verifico
+        ret = 1;
+        i = 1;
+        while((i<lenS1) && (ret == 1))// VERIFICA COMPATIBILITA' DIRETTA
+        {
+            if(*(s1+i) != *(s2+i))
+                ret = 0;
+            i = i+2;
+        }
+        if (ret == 0) // VERIFICA COMPATIBILITA' INVERSA
+        {
+            ret = 1;
+            i = 0;
+            while((i<lenS1) && (ret == 1))
+            {
+                if(*(s1+i) != *(s2+i))
+                    ret = 0;
+                i = i+2;
+            }
+        }
+    }
+    return ret;
 }
-void anagramma(char *s, char *s2){
+int anagramma(char *s1, char *s2){
+    int numS1[BUFFER] = {0}, numS2[BUFFER] = {0};
+    int ret, lenS1, lenS2;
+    int i;
 
+    lenS1 = 0; lenS2 = 0;
+    for(; *(s1+lenS1) != '\0'; lenS1++)
+    {// Mentre calcolo lunghezza stringa popolo anche vettore intero rispettivo
+     if (*(s1+lenS1)>='a' && *(s1+lenS1)<='z')
+             //numS1[s1[lenS1] -'a']++;
+             *(numS1+ (*(s1+lenS1)-'a')) += 1;
+    }
+    for(; *(s2+lenS2) != '\0'; lenS2++)
+    {// Mentre calcolo lunghezza stringa popolo anche vettore intero rispettivo
+     if (*(s2+lenS2)>='a' && *(s2+lenS2)<='z')
+         //numS2[s2[lenS2] -'a']++;
+        *(numS2+ (*(s2+lenS2)-'a')) += 1;
+    }
+    i = 0;
+    ret = 1;
+    while((i<26) && (ret == 1))
+    {
+        if(*(numS1+i) != *(numS2+i))
+            ret = 0; // NO ANAGRAMMA
+        i++;
+    }
+    return ret;
 }
 void visualizzaRicorrenze(char *s){
-    int contLen=0;
-    contLen='Z'-'A';
+    int j;
+    int cont=0;
+    int len = 0;
+    for(; *(s+len); len++);
+    for(int i=0; i<len; i++)
+    {
+        cont = 0;
+        j = i-1;
 
-    int cont[contLen];
-
-    for(int i=0;i<contLen;i++) cont[i]=0;
-
-    for(; *s != '\0'; s++){
-        cont[(*s-32)]++;
-        printf("%d\n",*s-32);
+        while((j>=0) && (*(s+j) != *(s+i)))
+            j--;
+        if(j<0)
+        {
+            cont = 1;
+            for(j = i+1; j<len; j++)
+                if(*(s+i) == *(s+j))
+                    cont++;
+            printf("Il valore %c e' presente %d volte\n", *(s+i), cont);
+        }
     }
-    /*for(int i=('a')-32;i<('z')-32;i++){
-        printf("\nLa lettera '%c' compare %d volte",('a'+i),cont[i]);
-    }*/
 }
 void cifraturaCesare(char *s, char *key){
     if(*key>='a' && *key<='z')

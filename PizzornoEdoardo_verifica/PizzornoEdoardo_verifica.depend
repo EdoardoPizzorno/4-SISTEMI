@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1665646128 source:c:\users\edopi\onedrive\desktop\scuola\github\4-sistemi\pizzornoedoardo_verifica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

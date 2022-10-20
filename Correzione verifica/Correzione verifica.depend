@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1666251551 source:c:\users\e.pizzorno.2293\desktop\4-sistemi\correzione verifica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

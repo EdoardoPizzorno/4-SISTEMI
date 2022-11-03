@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1666856521 source:c:\users\e.pizzorno.2293\desktop\4-sistemi\09 - allocazione dinamica2\main.c
+1667464695 source:c:\users\e.pizzorno.2293\desktop\4-sistemi\09 - allocazione dinamica2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
+	<string.h>
 

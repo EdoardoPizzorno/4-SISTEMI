@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1668066943 source:c:\users\e.pizzorno.2293\desktop\4-sistemi\10 - creazione struct\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+

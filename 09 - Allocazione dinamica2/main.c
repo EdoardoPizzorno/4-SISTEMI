@@ -28,7 +28,7 @@ int* copiaPari(int *v1, int *v2, int* len);
 void invertiStringa(char *s);
 void concatenaStringa(char* s1, char* s2);
 void spostaInS2(char* s1, char* s2);
-void splittaString(char *s1, char* s2);
+void splittaString(char *s1, char* split);
 
 void ordina(char* s);
 
@@ -43,6 +43,8 @@ int main()
 
     char* s1;
     char* s2;
+
+    char* split;
 
     scelta = (char*)malloc(sizeof(char));
 
@@ -138,11 +140,15 @@ int main()
                 s2 = (char*)malloc(sizeof(char));
                 fflush(stdin);
                 printf("\nInserisci carattere per fare la split: ");
-                scanf("%c", s2);
+                scanf("%c", split);
 
-                splittaString(s1, s2);
+                splittaString(s1, split);
+
+                printf("\nStringa splittata: %s",s1);
 
                 getchar();
+                free(s1);
+                free(split);
                 break;
             default:
                 break;
@@ -154,8 +160,21 @@ int main()
     printf("Premi per continuare...");
     return 0;
 }
-void splittaString(char* s1, char* s2){
+void splittaString(char* s1, char* split){
     s1 = realloc(s1, sizeof(char) * strlen(s1) + 1);
+    split = realloc(split, sizeof(char));
+
+    char* aus;
+    aus = realloc(aus, sizeof(char) * strlen(aus));
+
+    while(*s1 != '\0'){
+        if(*s1 != split){
+            *aus = *s1;
+            aus++;
+            s1++;
+        }else s1++;
+    }
+    s1 = aus;
 }
 
 void spostaInS2(char* s1, char* s2){

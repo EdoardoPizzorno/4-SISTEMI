@@ -23,24 +23,21 @@ int main()
 {
     Dipendenti *testa = NULL;
     int pos = 0;
-    int len_lista = 0;
 
     srand(time(NULL));
 
     testa = addOnHead(testa);
-    testa = addOnHead(testa);
+    testa = addOnTail(testa);
     testa = addOnTail(testa);
 
     printf("\n");
     stampaLista(testa);
 
-    len_lista = contaNodi(testa);
-    printf("\nCi sono %d nodi\n", len_lista);
+    printf("\n\n\nCi sono %d nodi\n", contaNodi(testa));
 
-    do{
-        printf("\nInserisci posizione --> ");
-        scanf("%d", &pos);
-    }while(pos < 0 || pos > len_lista);
+    printf("\nInserisci posizione --> ");
+    scanf("%d", &pos);
+    fflush(stdin);
 
     testa = addByPos(testa, pos);
 
@@ -49,18 +46,25 @@ int main()
 }
 
 Dipendenti* addByPos(Dipendenti* testa, int pos){
+    Dipendenti* Lista;
     Dipendenti* nodo;
-    int i = 0;
 
-    nodo = testa;
-
-    while(i != pos){
-        nodo = nodo->next;
-        if(i == pos - 1){
+    if(pos <= 1)
+        testa = addOnHead(testa);
+    else{
+        if(pos > contaNodi(testa))
+            testa = addOnTail(testa);
+        else{
             getchar();
-            nodo->next = nuovoDipendente();
+            nodo = nuovoDipendente();
+            Lista = testa;
+
+            for(int i = 1; i < pos - 1; i++)
+                Lista = Lista->next;
+
+            nodo->next = Lista->next;
+            Lista->next = nodo;
         }
-        i++;
     }
 
     return testa;
@@ -83,9 +87,15 @@ void stampaLista(Dipendenti* testa){
 
     nodo = testa;
 
-    while (nodo != NULL) {
-        printf("%s - %d - %s\n", nodo->cognome, nodo->eta, nodo->matricola);
-        nodo = nodo->next;
+    if(nodo == NULL)
+        printf("\nLista vuota");
+    else{
+        printf("\nLISTA DIPENDENTI\n\n");
+        printf("Matr.\tCognome\tEta\n\n");
+        while (nodo != NULL) {
+            printf("%s\t%s\t%d\n", nodo->matricola, nodo->cognome, nodo->eta);
+            nodo = nodo->next;
+        }
     }
 }
 
@@ -110,11 +120,11 @@ Dipendenti* addOnHead(Dipendenti* testa){
     Dipendenti* nodo;
     nodo = nuovoDipendente();
 
-    if(testa == NULL) // SE E' NULL NON CI SONO NODI NELLA LISTA
+    if(testa == NULL) // SE E' NULL NON CI SONO NODI NELLA LISTA (è il primo nodo in assoluto)
         testa = nodo;
     else{
-        nodo->next = testa;
-        testa = nodo;
+        nodo->next = testa; // sposta in seconda posizione testa
+        testa = nodo; // e in prima posizione mette un nuovoDipendente
     }
     return testa;
 }

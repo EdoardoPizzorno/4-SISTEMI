@@ -15,9 +15,13 @@ typedef struct dipendente{
 Dipendenti* nuovoDipendente();
 Dipendenti* addOnHead(Dipendenti* testa);
 Dipendenti* addOnTail(Dipendenti* testa); // AGGIUNGE IN CODA
+
 Dipendenti* addByPos(Dipendenti* testa, int pos);
+Dipendenti* delByPos(Dipendenti* testa, int pos);
+
 void stampaLista(Dipendenti* testa);
 int contaNodi(Dipendenti* testa);
+
 
 int main()
 {
@@ -35,14 +39,29 @@ int main()
 
     printf("\n\n\nCi sono %d nodi\n", contaNodi(testa));
 
-    printf("\nInserisci posizione --> ");
+    printf("\nInserisci posizione per aggiungere --> ");
     scanf("%d", &pos);
     fflush(stdin);
 
     testa = addByPos(testa, pos);
 
     stampaLista(testa);
+    
+    pos = 0;
+
+    printf("\nInserisci posizione per eliminare --> ");
+    scanf("%d", &pos);
+
+    testa = delByPos(testa, pos);
+
+    stampaLista(testa);
     return 0;
+}
+
+Dipendenti* delByPos(Dipendenti* testa, int pos){
+    Dipendenti* Lista;
+
+    
 }
 
 Dipendenti* addByPos(Dipendenti* testa, int pos){
@@ -120,7 +139,7 @@ Dipendenti* addOnHead(Dipendenti* testa){
     Dipendenti* nodo;
     nodo = nuovoDipendente();
 
-    if(testa == NULL) // SE E' NULL NON CI SONO NODI NELLA LISTA (è il primo nodo in assoluto)
+    if(testa == NULL) // SE E' NULL NON CI SONO NODI NELLA LISTA (ï¿½ il primo nodo in assoluto)
         testa = nodo;
     else{
         nodo->next = testa; // sposta in seconda posizione testa

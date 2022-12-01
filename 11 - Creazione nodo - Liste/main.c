@@ -22,7 +22,6 @@ Dipendenti* delByPos(Dipendenti* testa, int pos);
 void stampaLista(Dipendenti* testa);
 int contaNodi(Dipendenti* testa);
 
-
 int main()
 {
     Dipendenti *testa = NULL;
@@ -46,11 +45,12 @@ int main()
     testa = addByPos(testa, pos);
 
     stampaLista(testa);
-    
-    pos = 0;
 
-    printf("\nInserisci posizione per eliminare --> ");
-    scanf("%d", &pos);
+    pos = 0;
+    do{
+        printf("\nInserisci posizione per eliminare --> ");
+        scanf("%d", &pos);
+    }while(pos <= 0 || pos >= contaNodi(testa));
 
     testa = delByPos(testa, pos);
 
@@ -60,8 +60,18 @@ int main()
 
 Dipendenti* delByPos(Dipendenti* testa, int pos){
     Dipendenti* Lista;
+    Dipendenti* nodo;
 
-    
+    Lista = testa;
+
+    for(int i = 0; i < pos - 1; i++)
+        Lista = Lista->next;
+
+    nodo = NULL;
+    nodo->next = Lista->next;
+    Lista->next = nodo;
+
+    return testa;
 }
 
 Dipendenti* addByPos(Dipendenti* testa, int pos){
@@ -74,7 +84,6 @@ Dipendenti* addByPos(Dipendenti* testa, int pos){
         if(pos > contaNodi(testa))
             testa = addOnTail(testa);
         else{
-            getchar();
             nodo = nuovoDipendente();
             Lista = testa;
 

@@ -4,6 +4,8 @@
 #include <time.h>
 
 #define MAX 30
+#define TRUE 1
+#define FALSE
 
 typedef struct dipendente{
     char matricola[5];
@@ -15,12 +17,14 @@ typedef struct dipendente{
 Dipendenti* nuovoDipendente();
 Dipendenti* addOnHead(Dipendenti* testa);
 Dipendenti* addOnTail(Dipendenti* testa); // AGGIUNGE IN CODA
+Dipendenti* addOrdinato(Dipendenti* testa);
 
 Dipendenti* addByPos(Dipendenti* testa, int pos);
 Dipendenti* delByPos(Dipendenti* testa, int pos);
 
 void stampaLista(Dipendenti* testa);
 int contaNodi(Dipendenti* testa);
+void ordina(Dipendenti* testa);
 
 int main()
 {
@@ -29,14 +33,13 @@ int main()
 
     srand(time(NULL));
 
-    testa = addOnHead(testa);
-    testa = addOnTail(testa);
-    testa = addOnTail(testa);
+    for(int i = 0; i < 5; i++)
+        testa = addOrdinato(testa);
 
     printf("\n");
     stampaLista(testa);
 
-    printf("\n\n\nCi sono %d nodi\n", contaNodi(testa));
+    /*printf("\n\n\nCi sono %d nodi\n", contaNodi(testa));
 
     printf("\nInserisci posizione per aggiungere --> ");
     scanf("%d", &pos);
@@ -50,27 +53,92 @@ int main()
     do{
         printf("\nInserisci posizione per eliminare --> ");
         scanf("%d", &pos);
-    }while(pos <= 0 || pos >= contaNodi(testa));
+    }while(pos <= 0 || pos > contaNodi(testa));
 
     testa = delByPos(testa, pos);
 
-    stampaLista(testa);
+    stampaLista(testa);*/
     return 0;
 }
 
-Dipendenti* delByPos(Dipendenti* testa, int pos){
-    Dipendenti* Lista;
+Dipendenti* addOrdinato(Dipendenti* testa){
     Dipendenti* nodo;
+    Dipendenti* Lista;
+    Dipendenti* previous;
 
-    Lista = testa;
+    nodo = nuovoDipendente();
 
-    for(int i = 0; i < pos - 1; i++)
-        Lista = Lista->next;
+    if(testa == NULL){
+        testa = nodo;
+    }
+    else{
+        if(strcasecmp(testa->cognome, nodo->cognome) > 0){
+            nodo->next = testa;
+            testa = nodo;
+        }
+        else{
+            previous = testa; // per contenere l'indirizzo del nodo precedente
+            Lista = testa->next;
+            while(Lista != NULL && strcasecmp(nodo->cognome, Lista->cognome) > 0){
+                previous = Lista;
+                Lista = Lista->next;
+            }
+            nodo->next = Lista;
+            previous->next = nodo;
+        }
+    }
 
-    nodo = NULL;
-    nodo->next = Lista->next;
-    Lista->next = nodo;
+    return testa;
+}
+void ordina(Dipendenti* testa){
+    int rifare = TRUE;
+    char aus[MAX];
+    int ausEta = 0;
 
+    Dipendenti* l1 = NULL;
+    Dipendenti* l2 = NULL;
+
+    while(rifare == TRUE){
+        rifare = FALSE;
+        for(l1 = testa; l1->next != NULL; l1 = l1->next){
+            for(l2 = l1->next; l2 != NULL; l2 = l2->next){
+                if(strcmp(l1->cognome, l2->cognome) > 0){
+                    rifare = TRUE;
+                    //SWAP
+                    strcpy(aus, l1->matricola);
+                    strcpy(l1->matricola, l2->matricola);
+                    strcpy(l2->matricola, aus);
+
+                    strcpy(aus, l1->cognome);
+                    strcpy(l1->cognome, l2->cognome);
+                    strcpy(l2->cognome, aus);
+
+                    ausEta = l1->eta;
+                    l1->eta = l2->eta;
+                    l2->eta = ausEta;
+                }
+            }
+        }
+    }
+}
+
+Dipendenti* delByPos(Dipendenti* testa, int pos){
+    Dipendenti* del;
+    Dipendenti* previous;
+
+    previous = testa;
+
+    if(pos == 1)
+        testa = testa->next;
+    else{
+        for(int i = 1; i < pos - 1; i++)
+            previous = previous->next;
+
+        del = previous->next;
+        previous->next = del->next;
+    }
+
+    free(del);
     return testa;
 }
 

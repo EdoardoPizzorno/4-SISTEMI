@@ -1,258 +1,102 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+#include "class.h"
 
-#define MAX 30
-#define TRUE 1
-#define FALSE
+char menu();
 
-typedef struct dipendente{
-    char matricola[5];
-    char cognome[MAX];
-    int eta;
-    struct dipendente *next;
-} Dipendenti;
-
-Dipendenti* nuovoDipendente();
-Dipendenti* addOnHead(Dipendenti* testa);
-Dipendenti* addOnTail(Dipendenti* testa); // AGGIUNGE IN CODA
-Dipendenti* addOrdinato(Dipendenti* testa);
-
-Dipendenti* addByPos(Dipendenti* testa, int pos);
-Dipendenti* delByPos(Dipendenti* testa, int pos);
-
-void stampaLista(Dipendenti* testa);
-int contaNodi(Dipendenti* testa);
-void ordina(Dipendenti* testa);
-
-int main()
+int main(void)
 {
-    Dipendenti *testa = NULL;
-    int pos = 0;
-
-    srand(time(NULL));
-
-    for(int i = 0; i < 5; i++)
-        testa = addOrdinato(testa);
-
-    printf("\n");
-    stampaLista(testa);
-
-    /*printf("\n\n\nCi sono %d nodi\n", contaNodi(testa));
-
-    printf("\nInserisci posizione per aggiungere --> ");
-    scanf("%d", &pos);
-    fflush(stdin);
-
-    testa = addByPos(testa, pos);
-
-    stampaLista(testa);
-
-    pos = 0;
-    do{
-        printf("\nInserisci posizione per eliminare --> ");
-        scanf("%d", &pos);
-    }while(pos <= 0 || pos > contaNodi(testa));
-
-    testa = delByPos(testa, pos);
-
-    stampaLista(testa);*/
-    return 0;
-}
-
-Dipendenti* addOrdinato(Dipendenti* testa){
-    Dipendenti* nodo;
-    Dipendenti* Lista;
-    Dipendenti* previous;
-
-    nodo = nuovoDipendente();
-
-    if(testa == NULL){
-        testa = nodo;
-    }
-    else{
-        if(strcasecmp(testa->cognome, nodo->cognome) > 0){
-            nodo->next = testa;
-            testa = nodo;
-        }
-        else{
-            previous = testa; // per contenere l'indirizzo del nodo precedente
-            Lista = testa->next;
-            while(Lista != NULL && strcasecmp(nodo->cognome, Lista->cognome) > 0){
-                previous = Lista;
-                Lista = Lista->next;
-            }
-            nodo->next = Lista;
-            previous->next = nodo;
-        }
-    }
-
-    return testa;
-}
-void ordina(Dipendenti* testa){
-    int rifare = TRUE;
-    char aus[MAX];
-    int ausEta = 0;
-
-    Dipendenti* l1 = NULL;
-    Dipendenti* l2 = NULL;
-
-    while(rifare == TRUE){
-        rifare = FALSE;
-        for(l1 = testa; l1->next != NULL; l1 = l1->next){
-            for(l2 = l1->next; l2 != NULL; l2 = l2->next){
-                if(strcmp(l1->cognome, l2->cognome) > 0){
-                    rifare = TRUE;
-                    //SWAP
-                    strcpy(aus, l1->matricola);
-                    strcpy(l1->matricola, l2->matricola);
-                    strcpy(l2->matricola, aus);
-
-                    strcpy(aus, l1->cognome);
-                    strcpy(l1->cognome, l2->cognome);
-                    strcpy(l2->cognome, aus);
-
-                    ausEta = l1->eta;
-                    l1->eta = l2->eta;
-                    l2->eta = ausEta;
-                }
-            }
-        }
-    }
-}
-
-Dipendenti* delByPos(Dipendenti* testa, int pos){
-    Dipendenti* del;
-    Dipendenti* previous;
-
-    previous = testa;
-
-    if(pos == 1)
-        testa = testa->next;
-    else{
-        for(int i = 1; i < pos - 1; i++)
-            previous = previous->next;
-
-        del = previous->next;
-        previous->next = del->next;
-    }
-
-    free(del);
-    return testa;
-}
-
-Dipendenti* addByPos(Dipendenti* testa, int pos){
-    Dipendenti* Lista;
-    Dipendenti* nodo;
-
-    if(pos <= 1)
-        testa = addOnHead(testa);
-    else{
-        if(pos > contaNodi(testa))
-            testa = addOnTail(testa);
-        else{
-            nodo = nuovoDipendente();
-            Lista = testa;
-
-            for(int i = 1; i < pos - 1; i++)
-                Lista = Lista->next;
-
-            nodo->next = Lista->next;
-            Lista->next = nodo;
-        }
-    }
-
-    return testa;
-}
-
-int contaNodi(Dipendenti* testa){
-    Dipendenti* nodo;
-    int cont = 0;
-
-    nodo = testa;
-
-    while (nodo != NULL) {
-        cont++;
-        nodo = nodo->next;
-    }
-    return cont;
-}
-void stampaLista(Dipendenti* testa){
-    Dipendenti* nodo;
-
-    nodo = testa;
-
-    if(nodo == NULL)
-        printf("\nLista vuota");
-    else{
-        printf("\nLISTA DIPENDENTI\n\n");
-        printf("Matr.\tCognome\tEta\n\n");
-        while (nodo != NULL) {
-            printf("%s\t%s\t%d\n", nodo->matricola, nodo->cognome, nodo->eta);
-            nodo = nodo->next;
-        }
-    }
-}
-
-Dipendenti* addOnTail(Dipendenti* testa){
-    Dipendenti* nodo;
-    Dipendenti* Lista;
-
-    nodo = nuovoDipendente();
-
-    if(testa == NULL)
-        testa = nodo;
-    else{
-        Lista = testa; // salvo indirizzo di testa in Lista
-        while(Lista->next != NULL) // ciclo fino a quando la Lista non contiene NULL (quindi siamo arrivati alla coda)
-            Lista = Lista->next;
-        Lista->next = nodo;
-    }
-    return testa;
-}
-
-Dipendenti* addOnHead(Dipendenti* testa){
-    Dipendenti* nodo;
-    nodo = nuovoDipendente();
-
-    if(testa == NULL) // SE E' NULL NON CI SONO NODI NELLA LISTA (� il primo nodo in assoluto)
-        testa = nodo;
-    else{
-        nodo->next = testa; // sposta in seconda posizione testa
-        testa = nodo; // e in prima posizione mette un nuovoDipendente
-    }
-    return testa;
-}
-
-Dipendenti* nuovoDipendente(){
-    Dipendenti* dip;
+    char scelta;
+    Candidati *testa = NULL;
 
     char matr[5];
-    char cogn[MAX];
-    int eta;
+    char cogn[30];
+    char reg[30];
+    int p1 = 0, p2 = 0, p3 = 0;
 
-    /// INSERIMENTO MATRICOLA
-    for(int i = 0; i < 2; i++)
-        matr[i] = 'A' + rand() % ('Z'-'A');
-    for(int i = 2; i < 4; i++)
-        matr[i] = '0' + rand() % ('9'-'0');
+    do
+    {
+        scelta = menu();
+        fflush(stdin);
+        switch (scelta)
+        {
+        case 'A':
+        case 'a':
+            fflush(stdin);
+            testa = loadFromFile(testa, "candidati.csv", "punteggi.csv"); // ESEMPIO DI CARICAMENTO NODI/LISTA DA FILES
+            // showList(testa);
+            printf("Totale candidati caricati: %d\n", contaNodi(testa));
+            break;
+        case 'B':
+        case 'b': /* TODO: VISUALIZZA INFO LISTA */
+            fflush(stdin);
+            testa = loadFromFile(testa, "candidati.csv", "punteggi.csv");
+            showList(testa);
+            break;
+        case 'C':
+        case 'c': /* TODO: NUOVO CANDIDATO MATRICOLA [LLNNN], COGNOME, REGIONE, PUNTI x3 [1-100], MEDIA PUNTI */
+            fflush(stdin);
+            for(int i = 0; i < 2; i++)
+                matr[i] += 'A' + rand()% ('Z'-'A');
+            for(int i = 2; i < 5; i++)
+                matr[i] += rand()%10 + 1;
 
-    /// INSERIMENTO COGNOME
-    printf("Cognome ---> ");
-    gets(cogn);
+            printf("\nInserisci cognome: ");
+            scanf("%s", &cogn);
+            printf("Inserisci regione: ");
+            scanf("%s", &reg);
 
-    /// INSERIMENTO ETA
-    //printf("Eta --> ");
-    //scanf("%d", &eta);
-    eta = 18 + rand() % (65 - 18);
+            //cogn e reg TO UPPER
+            for(int i = 0; i < strlen(cogn); i++)
+                cogn[i] = toupper(cogn[i]);
+            for(int i = 0; i < strlen(reg); i++)
+                reg[i] = toupper(reg[i]);
 
-    dip = (Dipendenti*) malloc(sizeof(Dipendenti));
+            testa = loadFromFile(testa, "candidati.csv", "punteggi.csv");
+            testa = addOnTail(testa, matr, cogn, reg, rand()%100 + 1, rand()%100 + 1, rand()%100 + 1);
 
-    strcpy(dip->cognome, cogn);
-    dip->eta = eta;
-    strcpy(dip->matricola, matr);
-    dip->next = NULL;
+            showList(testa);
+            getchar();
+            break;
+        case 'D':
+        case 'd': /* TODO: MIGLIORI CIASCUNA REGIONE (SI RACCOMANDA ORDINAMENTO PER REGIONE) */
+            break;
+        case 'E':
+        case 'e': /* TODO: 3 MIGLIORI IN ASSOLUTO (SI RACCOMANDA ORDINAMENTO PER MEDIA {DESC}) */
+            break;
+        case 'F':
+        case 'f': /* TODO: RICERCA MATRICOLA E ELIMIINA NODO */
+            break;
+        case 'G':
+        case 'g': /* TODO: SALVA INFO NODI SU FILE (backup.csv) */
+            break;
+        case 'Q':
+        case 'q':
+            printf("Arrivederci...");
+            break;
+        default:
+            printf("Scelta non disponibile\n");
+            break;
+        }
+        getchar();
+    } while (scelta != 'q' && scelta != 'Q');
 
-    return dip;
+    return 0;
+}
+char menu()
+{
+    char sc;
+    system("@cls||clear");
+    printf("--- CANDIDATI (GESTIONE DATI DA FILE) ---\n");
+    printf("A. Carica da File\n");
+    printf("B. Visualizza Informazioni Lista\n");
+    printf("C. Inserisci Nuovo Candidato, regione e punti\n");
+    printf("D. Ricerca Migliori Per Ciascuna Regione\n");
+    printf("E. Ordina NODI (E NON INFORMAZIONI CONTENUTE IN ESSI) per Media Punteggi (DESC) e mostra 3 migliori\n");
+    printf("F. Data la matr del candidato, applicare una ricerca e, se trovato, eliminarlo\n");
+    printf("G. Backup - salvare informazioni su file\n");
+    printf("Q. Quit\n");
+    printf("Scelta -> ");
+    scanf("%c", &sc);
+    fflush(stdin);
+    system("@cls||clear");
+    return sc;
 }

@@ -11,18 +11,20 @@ int main(void)
     char cogn[30];
     char reg[30];
     int p1 = 0, p2 = 0, p3 = 0;
+    char del_matr[5];
 
     do
     {
         scelta = menu();
         fflush(stdin);
+
+
         switch (scelta)
         {
         case 'A':
         case 'a':
             fflush(stdin);
-            testa = loadFromFile(testa, "candidati.csv", "punteggi.csv"); // ESEMPIO DI CARICAMENTO NODI/LISTA DA FILES
-            // showList(testa);
+            testa = loadFromFile(testa, "candidati.csv", "punteggi.csv");
             printf("Totale candidati caricati: %d\n", contaNodi(testa));
             break;
         case 'B':
@@ -34,10 +36,11 @@ int main(void)
         case 'C':
         case 'c': /* TODO: NUOVO CANDIDATO MATRICOLA [LLNNN], COGNOME, REGIONE, PUNTI x3 [1-100], MEDIA PUNTI */
             fflush(stdin);
+
             for(int i = 0; i < 2; i++)
-                matr[i] += 'A' + rand()% ('Z'-'A');
+                matr[i] += 'A' + rand()%'Z';
             for(int i = 2; i < 5; i++)
-                matr[i] += rand()%10 + 1;
+                matr[i] += '0' + rand()%'9';
 
             printf("\nInserisci cognome: ");
             scanf("%s", &cogn);
@@ -50,23 +53,47 @@ int main(void)
             for(int i = 0; i < strlen(reg); i++)
                 reg[i] = toupper(reg[i]);
 
-            testa = loadFromFile(testa, "candidati.csv", "punteggi.csv");
             testa = addOnTail(testa, matr, cogn, reg, rand()%100 + 1, rand()%100 + 1, rand()%100 + 1);
 
             showList(testa);
+
             getchar();
             break;
         case 'D':
         case 'd': /* TODO: MIGLIORI CIASCUNA REGIONE (SI RACCOMANDA ORDINAMENTO PER REGIONE) */
+            fflush(stdin);
+
+            printf("\nI MIGLIORI PER CIASCUNA REGIONE: \n\n");
+            miglioriPerRegione(testa);
+
+            getchar();
             break;
         case 'E':
         case 'e': /* TODO: 3 MIGLIORI IN ASSOLUTO (SI RACCOMANDA ORDINAMENTO PER MEDIA {DESC}) */
+            fflush(stdin);
+
+            printf("\nI MIGLIORI IN ASSOLUTO: \n\n");
+            miglioriAssoluto(testa);
+
+            getchar();
             break;
         case 'F':
         case 'f': /* TODO: RICERCA MATRICOLA E ELIMIINA NODO */
+            fflush(stdin);
+            printf("Inserisci matricola della persona da eliminare: ");
+            scanf("%s", del_matr);
+
+            testa = eliminaPersona(testa, del_matr);
+
+            getchar();
             break;
         case 'G':
         case 'g': /* TODO: SALVA INFO NODI SU FILE (backup.csv) */
+            fflush(stdin);
+
+            stampaSuFile(testa, "backup.csv");
+
+            getchar();
             break;
         case 'Q':
         case 'q':
@@ -77,6 +104,7 @@ int main(void)
             break;
         }
         getchar();
+        fflush(stdin);
     } while (scelta != 'q' && scelta != 'Q');
 
     return 0;

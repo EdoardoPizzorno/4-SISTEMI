@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1674038023 source:c:\users\e.pizzorno.2293\desktop\4-sistemi\verifiche o esercitazioni\prova_verifica190123\main.c
+	"class.h"
+
+1674038337 c:\users\e.pizzorno.2293\desktop\4-sistemi\verifiche o esercitazioni\prova_verifica190123\class.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+

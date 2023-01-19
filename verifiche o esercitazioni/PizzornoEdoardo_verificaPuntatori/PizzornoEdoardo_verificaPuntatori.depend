@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1674117374 source:c:\users\e.pizzorno.2293\desktop\4-sistemi\verifiche o esercitazioni\pizzornoedoardo_verificapuntatori\main.c
+	"pizzorno.h"
+
+1674117456 c:\users\e.pizzorno.2293\desktop\4-sistemi\verifiche o esercitazioni\pizzornoedoardo_verificapuntatori\pizzorno.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

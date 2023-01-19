@@ -1,0 +1,132 @@
+#include "EsListe.h"
+
+char menu(); 
+
+int main(void)
+{
+    char scelta; 
+    Candidati *testa = NULL;
+    /*ES C */
+    char matr[6]; 
+    char cognome[15]; 
+    char regione[15]; 
+    int p1, p2, p3; 
+    /* ES E */
+    int i; 
+    Candidati *pLista; 
+    /* ES F */
+    int pos; 
+    do
+    {
+        scelta = menu();
+        fflush(stdin); 
+        switch (scelta)
+        {
+        case 'A':
+        case 'a':
+            fflush(stdin); 
+            testa = loadFromFile(testa, "candidati.csv", "punteggi.csv");
+            getchar();
+            printf("Totale candidati caricati: %d\n", contaNodi(testa)); 
+            break;
+        case 'B':
+        case 'b':
+            showList(testa);
+            getchar(); 
+            break;
+        case 'C':
+        case 'c':
+            /* NUOVO CANDIDATO */
+            getchar();
+            printf("Inserisci matricola [AANNN]: "); 
+            gets(matr); // SI DA PER SCONTATO MATRICOLA UNIVOCA 
+            getchar();
+            printf("Inserisci cognome: "); 
+            gets(cognome);  // SI DA PER SCONTATO INPUT CORRETTO
+            getchar();
+            printf("Inserisci regione: "); 
+            gets(regione); // SI DA PER SCONTATO INPUT CORRETTO
+            getchar(); 
+            printf("Inserisci p1: "); 
+            scanf("%d", &p1); // SI DA PER SCONTATO INPUT CORRETTO
+            printf("Inserisci p2: "); 
+            scanf("%d", &p2); // SI DA PER SCONTATO INPUT CORRETTO
+            printf("Inserisci p3: "); 
+            scanf("%d", &p3); // SI DA PER SCONTATO INPUT CORRETTO
+            if (caricaCandidato(testa, matr, cognome, regione, p1, p2, p3) == TRUE) 
+                printf("Candidato inserito con successo\n"); 
+            else
+                printf("Errore caricamento candidato\n"); 
+            getchar(); 
+            break;
+         case 'D':
+        case 'd': /* TODO: MIGLIORI CIASCUNA REGIONE (SI RACCOMANDA ORDINAMENTO PER REGIONE) */
+            testa = ordinaSelezioneRegione(testa);
+            showList(testa);
+            stampaMiglioriRegione(testa);
+            getchar();
+            break;
+        case 'E':
+        case 'e': /* TODO: 3 MIGLIORI IN ASSOLUTO (SI RACCOMANDA ORDINAMENTO PER MEDIA {DESC}) */
+            testa = ordinaSelezioneMedia(testa); 
+            showList(testa); 
+            pLista = testa;  
+            printf("MIGLIORI 3\n");
+            for(i=0; i<3; i++)
+            {
+                printf("%s (%s): %.2f media\n", pLista->cognome, pLista->matricola, pLista->media); 
+                pLista = pLista->next; 
+            }
+            getchar(); 
+            break;
+        case 'F': 
+        case 'f': /* TODO: RICERCA MATRICOLA E ELIMIINA NODO */
+            showList(testa); 
+            printf("Inserisci matricola da eliminare: "); 
+            gets(matr); 
+            pos = cercaNodo(testa, matr); 
+            if (pos != -1)
+                testa = eliminaNodo(testa, pos);
+            else
+                printf("Matricola non trovata\n");
+            showList(testa); 
+            getchar();
+            break;
+        case 'G':
+        case 'g': /* TODO: SALVA INFO NODI SU FILE (backup.csv) */
+            eseguiBackup(testa, "backup.csv");
+            printf("Backup completato\n"); 
+            getchar(); 
+            break;
+        case 'Q':
+        case 'q':
+            printf("Arrivederci..."); 
+            break;
+        default:
+            printf("Scelta non disponibile\n"); 
+            break;
+        }
+        getchar();
+    } while (scelta != 'q' && scelta != 'Q');
+        
+    return 0; 
+}
+char menu()
+{
+    char sc; 
+    system("@cls||clear");
+    printf("--- ---\n");
+    printf("A. Carica da File\n");
+    printf("B. Visualizza Informazioni Lista\n"); 
+    printf("C. Inserisci Nuovo Candidato, regione e punti\n"); 
+    printf("D. Ricerca Migliori Per Ciascuna Regione\n"); 
+    printf("E. Ordina NODI (E NON INFORMAZIONI CONTENUTE IN ESSI) per Media Punteggi (DESC) e mostra 3 migliori\n"); 
+    printf("F. Data la matr del candidato, applicare una ricerca e, se trovato, eliminarlo\n"); 
+    printf("G. Backup - salvare informazioni su file\n"); 
+    printf("Q. Quit\n"); 
+    printf("Scelta -> "); 
+    scanf("%c", &sc); 
+    fflush(stdin); 
+    system("@cls||clear");
+    return sc; 
+}

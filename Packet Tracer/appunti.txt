@@ -1,0 +1,26 @@
+Parametri fondamentali:
+1) IP
+2) Subnet Mask
+3) Gateway predefinito
+4) DNS
+In una rete Point-to-Point sono fondamentali solo i primi 2.
+
+INDIRIZZI IP: 
+
+IPv4 --> 32 bit (4 byte); "2^32" IPv4 disponibili; composto da Network(I parte, 2byte) e Host(II parte, 2byte) | "192.168.23.1" ('192.168' -> Network; '23.1' -> Host)
+- L'indirizzo di Broadcast si definisce con "10.0.255.255".
+- L'indirizzo di Network si ottiene facendo (IP Host & Subnet Mask).
+- L'univocità del dispositivo è determinata dall'Host, in una rete la parte Network è uguale (che cambia in base al mezzo di comunicazione (Wired o Wireless)).
+- Ogni indirizzo IPv4 è sempre associato una Subnet Mask, sono strettamente collegati tra di loro.
+- Nella tabella di Routing va solo l'indirizzo di Network.
+
+IPv6 --> 128 bit (16 byte); "2^128" IPv6 disponibili;
+-Non ci sono Subnet mask
+
+Esempio Subnet mask: 255.255.255.0
+Esempio IPv4: 192.168.23.1
+
+- Subnet mask si può scrivere con la Slash Notation: "IPv4/n", in cui 'n' è nbit dalla parte Host
+  Quindi: "192.168.23.1/16" (16 stanno ad indicare il numero di bit dalla parte Host (2byte)); con "/8" si possono collegare fino a "16.000.000+" di dispositivi; con "/24" fino a "254"
+- Il numero di Host è "(2^n)-2" (in cui 'n' è il numero di bit parte Host); la rete Vallauri ha "(2^16)-2 = 65534" host disponibili
+- Il range di indirizzi è "[10.0.0.1 fino a 10.0.255.254]" ("254" perchè se fosse "255" sarebbe di Broadcast)

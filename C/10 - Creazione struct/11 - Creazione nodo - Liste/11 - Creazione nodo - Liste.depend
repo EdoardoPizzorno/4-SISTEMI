@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1674111082 source:c:\users\e.pizzorno.2293\desktop\4-sistemi\11 - creazione nodo - liste\main.c
+	"class.h"
+
+1674111082 c:\users\e.pizzorno.2293\desktop\4-sistemi\11 - creazione nodo - liste\class.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1674075564 source:c:\users\edopi\onedrive\desktop\scuola\github\4-sistemi\11 - creazione nodo - liste\main.c
+	"class.h"
+
+1674075753 c:\users\edopi\onedrive\desktop\scuola\github\4-sistemi\11 - creazione nodo - liste\class.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+

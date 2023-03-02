@@ -21,6 +21,13 @@ Esempio Subnet mask: 255.255.255.0
 Esempio IPv4: 192.168.23.1
 
 - Subnet mask si può scrivere con la Slash Notation: "IPv4/n", in cui 'n' è nbit dalla parte Host
-  Quindi: "192.168.23.1/16" (16 stanno ad indicare il numero di bit dalla parte Host (2byte)); con "/8" si possono collegare fino a "16.000.000+" di dispositivi; con "/24" fino a "254"
+  Quindi: "192.168.23.1/24" ("24" stanno ad indicare il numero di bit dalla parte Network); con "/8" si possono collegare fino a "16.000.000+" di dispositivi; con "/24" fino a "254"
+  "10.0.100.200" --> Subnet Mask sarebbe "/16" perchè nella parte Network ci sono "2^n" (in cui 'n' in questo caso è "2^2" ??? );
+  "192.168.0.30" --> Subnet Mask sarebbe "/24" perchè nella parte Network ci sono "2^n" (in cui 'n' in questo caso è "2^3" ??? );
 - Il numero di Host è "(2^n)-2" (in cui 'n' è il numero di bit parte Host); la rete Vallauri ha "(2^16)-2 = 65534" host disponibili
 - Il range di indirizzi è "[10.0.0.1 fino a 10.0.255.254]" ("254" perchè se fosse "255" sarebbe di Broadcast)
+
+- Nell'esercizio fatto in classe, PC1 e PC2 COMUNICANO tra di loro e PC3 e PC4 COMUNICANO tra di loro, perchè fanno parte della stessa rete (dipende dall'IP assegnato).
+ Per farle comunicare tutte tra di loro si può:
+ 1) Mettere uno Switch di livello 3
+ 2) Ogni interfaccia del router diventa il Gateway per una delle due reti e poi farà da router all'altra interfaccia 

@@ -13,21 +13,36 @@ IPv4 --> 32 bit (4 byte); "2^32" IPv4 disponibili; composto da Network(I parte, 
 - L'univocità del dispositivo è determinata dall'Host, in una rete la parte Network è uguale (che cambia in base al mezzo di comunicazione (Wired o Wireless)).
 - Ogni indirizzo IPv4 è sempre associato una Subnet Mask, sono strettamente collegati tra di loro.
 - Nella tabella di Routing va solo l'indirizzo di Network.
+- Per determinare la parte Network dell'indirizzo IPv4, bisogna vedere la Subnet Mask (se è '255.255.255.0', significa che la parte Network sarà '192.168.0' e la parte Host 
+  sarà '.1'; se invece la Subnet Mask è '255.255', la parte Network sarà '192.168' e il restante sarà parte dell'Host)
 
 IPv6 --> 128 bit (16 byte); "2^128" IPv6 disponibili;
--Non ci sono Subnet mask
+- Non ci sono Subnet mask
 
 Esempio Subnet mask: 255.255.255.0
 Esempio IPv4: 192.168.23.1
 
-- Subnet mask si può scrivere con la Slash Notation: "IPv4/n", in cui 'n' è nbit dalla parte Host
-  Quindi: "192.168.23.1/24" ("24" stanno ad indicare il numero di bit dalla parte Network); con "/8" si possono collegare fino a "16.000.000+" di dispositivi; con "/24" fino a "254"
-  "10.0.100.200" --> Subnet Mask sarebbe "/16" perchè nella parte Network ci sono "2^n" (in cui 'n' in questo caso è "2^2" ??? );
-  "192.168.0.30" --> Subnet Mask sarebbe "/24" perchè nella parte Network ci sono "2^n" (in cui 'n' in questo caso è "2^3" ??? );
+- Subnet Mask (32 bit) si può scrivere con la Slash Notation: "IPv4/n", in cui 'n' è nbit dalla parte Host;
+  Quindi: "192.168.23.1/24" ("24" stanno ad indicare il numero di bit dalla parte Network); con "/8" si possono collegare fino a "16.000.000+" di dispositivi; con "/24" fino    a "254"
+  "10.0.100.200" --> Subnet Mask sarebbe "/16" perchè la Subnet Mask è "255.255.0.0" (i primi 16 bit) (in cui 'n' indica quando bit sono riservati alla parte Network );
+  "192.168.0.30" --> Subnet Mask sarebbe "/24" perchè la Subnet Mask è "255.255.255.0" (i primi 24 bit) (in cui 'n' indica quando bit sono riservati alla parte Network );
+  - La Subnet Mask è sempre associato ad un indirizzo IP, da sola non serve a niente;
+
 - Il numero di Host è "(2^n)-2" (in cui 'n' è il numero di bit parte Host); la rete Vallauri ha "(2^16)-2 = 65534" host disponibili
 - Il range di indirizzi è "[10.0.0.1 fino a 10.0.255.254]" ("254" perchè se fosse "255" sarebbe di Broadcast)
 
 - Nell'esercizio fatto in classe, PC1 e PC2 COMUNICANO tra di loro e PC3 e PC4 COMUNICANO tra di loro, perchè fanno parte della stessa rete (dipende dall'IP assegnato).
  Per farle comunicare tutte tra di loro si può:
  1) Mettere uno Switch di livello 3
- 2) Ogni interfaccia del router diventa il Gateway per una delle due reti e poi farà da router all'altra interfaccia 
+ 2) Ogni interfaccia del router diventa il Gateway per una delle due reti e poi farà da router all'altra interfaccia
+
+- Tramite DHCP, si può comunicare il Gateway predefinito (per comunicare con l'esterno bisogna per forza avere il Gateway predefinito).
+- Senza DCHP, bisogna impostare anche il Gateway predefinito.
+- Se non esiste DHCP, si usa APIPA (assegna in automatico indirizzi proprietari di Microsoft che iniziano con '169.254.x.y'). Quando viene assegnato un indirizzo APIPA, si      invia un echo request per informare che l'indirizzo è stato preso (per evitare che altre macchine utilizzino lo stesso indirizzo). APIPA non gestisce il Gateway, infatti si   può usare con comunicazioni locali, senza comunicare con l'esterno, in quanto sarebbe necessario il Gateway predefinito).
+- Echo request --> PDU del protocollo ICMP.
+
+- Tramite il protocollo ARP (Address Resolution Protocol), si può ricavare l'indirizzo MAC avendo l'IP. 
+- In ogni host c'è una "ARP Table", avente 2 colonne (nella prima c'è l'IP e nell'altra c'è il MAC)
+  Se nella tabella non c'è l'indirizzo, invia una "ARP Request" (è una PDU; MAC destinatario -> "FF-FF-FF-FF-FF-FF"; MAC origine -> il suo) e inserisce in qualsiasi caso i      due indirizzi nella ARP Table (dato che probabilmente invierà altri dati). "ARP Reply" ???
+
+- "ping" è un comando che invia all'indirizzo indicato 4 echo request per verificare la latenza.

@@ -45,4 +45,9 @@ Esempio IPv4: 192.168.23.1
 - In ogni host c'è una "ARP Table", avente 2 colonne (nella prima c'è l'IP e nell'altra c'è il MAC)
   Se nella tabella non c'è l'indirizzo, invia una "ARP Request" (è una PDU; MAC destinatario -> "FF-FF-FF-FF-FF-FF"; MAC origine -> il suo) e inserisce in qualsiasi caso i      due indirizzi nella ARP Table (dato che probabilmente invierà altri dati). "ARP Reply" ???
 
-- "ping" è un comando che invia all'indirizzo indicato 4 echo request per verificare la latenza.
+- "ping" è un comando che invia all'indirizzo indicato 4 echo request.
+
+
+- La configurazione degli IP nei PC può essere fatta in modo automatico (con DHCP, se non c'è DHCP si usa APIPA) oppure manualmente.
+- Agli Switch posso assegnare un indirizzo IP, ma non è indispensabile (gli Switch vecchi non c'erano gli IP), in quanto lavora su indirizzi MAC (se in una rete metto uno     Switch e non gli assegno un IP, funziona comunque). Lo scopo di assegnare un IP è di impronta amministrativa (da remoto posso configurare lo Switch).
+- 

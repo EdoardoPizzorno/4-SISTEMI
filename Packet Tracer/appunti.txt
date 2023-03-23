@@ -50,4 +50,6 @@ Esempio IPv4: 192.168.23.1
 
 - La configurazione degli IP nei PC può essere fatta in modo automatico (con DHCP, se non c'è DHCP si usa APIPA) oppure manualmente.
 - Agli Switch posso assegnare un indirizzo IP, ma non è indispensabile (gli Switch vecchi non c'erano gli IP), in quanto lavora su indirizzi MAC (se in una rete metto uno     Switch e non gli assegno un IP, funziona comunque). Lo scopo di assegnare un IP è di impronta amministrativa (da remoto posso configurare lo Switch).
-- 
+
+- Fare comando "no shutdown" dopo aver impostato l'interfaccia, IP e SNM
+- Per cambiare ip address --> "no ip address IPprecedente SNMprecedente"; rifare "ip address IPnuovo SNMnuovo"

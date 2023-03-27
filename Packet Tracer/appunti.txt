@@ -53,3 +53,5 @@ Esempio IPv4: 192.168.23.1
 
 - Fare comando "no shutdown" dopo aver impostato l'interfaccia, IP e SNM
 - Per cambiare ip address --> "no ip address IPprecedente SNMprecedente"; rifare "ip address IPnuovo SNMnuovo"
+
+- Non tutti gli indirizzi di Broadcast terminano con 255 (l'indirizzo host deve terminare con 1111)

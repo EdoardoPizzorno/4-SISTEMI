@@ -55,3 +55,4 @@ Esempio IPv4: 192.168.23.1
 - Per cambiare ip address --> "no ip address IPprecedente SNMprecedente"; rifare "ip address IPnuovo SNMnuovo"
 
 - Non tutti gli indirizzi di Broadcast terminano con 255 (l'indirizzo host deve terminare con 1111)
+- I frame vengono "etichettati" con il nome della VLAN a cui appartengono

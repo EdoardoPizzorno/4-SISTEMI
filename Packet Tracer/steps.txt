@@ -6,3 +6,10 @@
 6) configurare le interfacce da switch a router con tutte le VLANs
 7) configurare le interfacce da router a switch impostando gli IPs e SNMs (es. 172.16.0.1)
 8) settare nei dispositivi il defualt gateway (che sarebbe della rete impostata sul router --> da mettere 172.16.0.1)
+
+
+per fare subinterfaces: 
+1) int Gig1/0.10
+2) encapsulation dot1q 1q
+3) dare IP e SNM (192.168.1.1 255.255.255.192)
+4) farlo per tutte le altre reti

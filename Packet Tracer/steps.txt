@@ -1,6 +1,6 @@
 1) creare VLANs
 2) a ogni interfaccia associare la VLAN corrispondente
-3) farlo con tutti i router
+3) farlo con tutti gli switch
 4) allo switch centrale mettere le interfacce trunk verso gli altri switch e gli altri switch mettere interfaccia trunk (solo quella che va fino allo switch centrale)
 5) farlo con tutti gli switch
 6) configurare le interfacce da switch a router con tutte le VLANs

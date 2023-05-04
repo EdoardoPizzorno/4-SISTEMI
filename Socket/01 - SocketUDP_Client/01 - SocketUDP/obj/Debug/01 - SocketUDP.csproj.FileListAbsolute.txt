@@ -1,0 +1,11 @@
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\bin\Debug\01 - SocketUDP.exe.config
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\bin\Debug\01 - SocketUDP.exe
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\bin\Debug\01 - SocketUDP.pdb
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\01 - SocketUDP.csproj.AssemblyReference.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\01 - SocketUDP.csproj.SuggestedBindingRedirects.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\_01___SocketUDP.Form1.resources
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\_01___SocketUDP.Properties.Resources.resources
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\01 - SocketUDP.csproj.GenerateResource.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\01 - SocketUDP.csproj.CoreCompileInputs.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\01 - SocketUDP.exe
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\01 - SocketUDP\01 - SocketUDP\obj\Debug\01 - SocketUDP.pdb

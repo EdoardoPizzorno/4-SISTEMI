@@ -45,7 +45,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.NUD_Port);
-            this.groupBox2.Location = new System.Drawing.Point(145, 12);
+            this.groupBox2.Location = new System.Drawing.Point(194, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(124, 54);
             this.groupBox2.TabIndex = 3;
@@ -91,28 +91,31 @@
             // 
             // btnTermina
             // 
-            this.btnTermina.Location = new System.Drawing.Point(113, 231);
+            this.btnTermina.Enabled = false;
+            this.btnTermina.Location = new System.Drawing.Point(258, 228);
             this.btnTermina.Name = "btnTermina";
             this.btnTermina.Size = new System.Drawing.Size(75, 39);
             this.btnTermina.TabIndex = 4;
             this.btnTermina.Text = "TERMINA";
             this.btnTermina.UseVisualStyleBackColor = true;
+            this.btnTermina.Click += new System.EventHandler(this.btnTermina_Click);
             // 
             // btnAvvia
             // 
-            this.btnAvvia.Location = new System.Drawing.Point(194, 231);
+            this.btnAvvia.Location = new System.Drawing.Point(177, 228);
             this.btnAvvia.Name = "btnAvvia";
             this.btnAvvia.Size = new System.Drawing.Size(75, 39);
             this.btnAvvia.TabIndex = 4;
             this.btnAvvia.Text = "AVVIA";
             this.btnAvvia.UseVisualStyleBackColor = true;
+            this.btnAvvia.Click += new System.EventHandler(this.btnAvvia_Click);
             // 
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(12, 72);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(257, 150);
+            this.dgv.Size = new System.Drawing.Size(321, 150);
             this.dgv.TabIndex = 5;
             // 
             // btnPulisci
@@ -123,12 +126,13 @@
             this.btnPulisci.TabIndex = 6;
             this.btnPulisci.Text = "Pulisci";
             this.btnPulisci.UseVisualStyleBackColor = true;
+            this.btnPulisci.Click += new System.EventHandler(this.btnPulisci_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 282);
+            this.ClientSize = new System.Drawing.Size(345, 276);
             this.Controls.Add(this.btnPulisci);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.btnAvvia);
@@ -137,6 +141,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Port)).EndInit();

@@ -1,0 +1,11 @@
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\bin\Debug\01_SocketUDP_Server.exe.config
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\bin\Debug\01_SocketUDP_Server.exe
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\bin\Debug\01_SocketUDP_Server.pdb
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\01_SocketUDP_Server.csproj.AssemblyReference.cache
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\01_SocketUDP_Server.csproj.SuggestedBindingRedirects.cache
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\_01_SocketUDP_Server.Properties.Resources.resources
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\01_SocketUDP_Server.csproj.GenerateResource.cache
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\01_SocketUDP_Server.csproj.CoreCompileInputs.cache
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\01_SocketUDP_Server.exe
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\01_SocketUDP_Server.pdb
+C:\Users\marco.paschetta\Desktop\4B\Socket\01_SocketUDP_Server\obj\Debug\_01_SocketUDP_Server.FrmMain.resources

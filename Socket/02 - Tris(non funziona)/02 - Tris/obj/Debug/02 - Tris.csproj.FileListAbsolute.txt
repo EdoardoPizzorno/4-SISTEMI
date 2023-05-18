@@ -1,0 +1,11 @@
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\bin\Debug\02 - Tris.exe.config
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\bin\Debug\02 - Tris.exe
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\bin\Debug\02 - Tris.pdb
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\02 - Tris.csproj.AssemblyReference.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\02 - Tris.csproj.SuggestedBindingRedirects.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\_02___Tris.frmTris.resources
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\_02___Tris.Properties.Resources.resources
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\02 - Tris.csproj.GenerateResource.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\02 - Tris.csproj.CoreCompileInputs.cache
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\02 - Tris.exe
+C:\Users\e.pizzorno.2293\Documents\GitHub\4-SISTEMI\Socket\02 - Tris\02 - Tris\obj\Debug\02 - Tris.pdb

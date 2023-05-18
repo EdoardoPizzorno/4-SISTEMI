@@ -1,0 +1,11 @@
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\bin\Debug\UPD_Tris.exe.config
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\bin\Debug\UPD_Tris.exe
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\bin\Debug\UPD_Tris.pdb
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.csproj.AssemblyReference.cache
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.csproj.SuggestedBindingRedirects.cache
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.Form1.resources
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.Properties.Resources.resources
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.csproj.GenerateResource.cache
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.csproj.CoreCompileInputs.cache
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.exe
+C:\Users\p.cairo.2224\Desktop\UPD_Tris\UPD_Tris\obj\Debug\UPD_Tris.pdb

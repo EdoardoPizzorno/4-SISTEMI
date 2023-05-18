@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _01_SocketUDP_Server.Classi
+namespace _02___Tris
 {
     public delegate void datiRicevutiEventHandler(ClsMessage msg);
     public class ClsUDPServer
@@ -44,7 +44,7 @@ namespace _01_SocketUDP_Server.Classi
         {
             int nBytesRicevuti;
             string msg;
-            byte[] bufferRx = new byte[MAX_BYTE];
+            byte[] bufferRx;
             ClsMessage clsMsg; 
 
           //  bufferRx = new byte[MAX_BYTE];
@@ -67,6 +67,7 @@ namespace _01_SocketUDP_Server.Classi
                 }
                 catch (SocketException ex)
                 {
+                    throw ex;
                 }
             }
 

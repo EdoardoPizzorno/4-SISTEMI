@@ -1,0 +1,33 @@
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\bin\Debug\UDP_IndovinaParolaClient.exe.config
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\bin\Debug\UDP_IndovinaParolaClient.exe
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\bin\Debug\UDP_IndovinaParolaClient.pdb
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.AssemblyReference.cache
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.FrmMain.resources
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.Properties.Resources.resources
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.GenerateResource.cache
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.exe
+C:\Users\Lenovo-i5\OneDrive - vallauri.edu\AS 2022-2023\4D - INF\Sistemi e Reti\Socket\SocketUDP\UDP_IndovinaParola\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.pdb
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\bin\Debug\UDP_IndovinaParolaClient.exe.config
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\bin\Debug\UDP_IndovinaParolaClient.exe
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\bin\Debug\UDP_IndovinaParolaClient.pdb
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.AssemblyReference.cache
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.FrmMain.resources
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.Properties.Resources.resources
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.GenerateResource.cache
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.csproj.CoreCompileInputs.cache
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.exe
+C:\Users\Marco\Desktop\UDP_IndovinaParolaClient\obj\Debug\UDP_IndovinaParolaClient.pdb
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\bin\Debug\UDP_IndovinaParolaClient.exe.config
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\bin\Debug\UDP_IndovinaParolaClient.exe
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\bin\Debug\UDP_IndovinaParolaClient.pdb
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.csproj.AssemblyReference.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.FrmMain.resources
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.Properties.Resources.resources
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.csproj.GenerateResource.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.csproj.CoreCompileInputs.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.exe
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\03 - IndovinaParola_Client\obj\Debug\UDP_IndovinaParolaClient.pdb

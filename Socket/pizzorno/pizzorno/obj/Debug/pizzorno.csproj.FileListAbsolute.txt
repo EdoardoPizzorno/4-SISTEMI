@@ -1,0 +1,11 @@
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\bin\Debug\pizzorno.exe.config
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\bin\Debug\pizzorno.exe
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\bin\Debug\pizzorno.pdb
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.csproj.AssemblyReference.cache
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.csproj.SuggestedBindingRedirects.cache
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.Form1.resources
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.Properties.Resources.resources
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.csproj.GenerateResource.cache
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.csproj.CoreCompileInputs.cache
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.exe
+C:\Users\e.pizzorno.2293\Desktop\4-SISTEMI\Socket\pizzorno\pizzorno\obj\Debug\pizzorno.pdb

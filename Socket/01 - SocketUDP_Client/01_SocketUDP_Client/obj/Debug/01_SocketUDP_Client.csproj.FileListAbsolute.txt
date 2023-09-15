@@ -9,3 +9,14 @@ C:\Users\p.cairo.2224\Desktop\01_SocketUDP_Client\01_SocketUDP_Client\bin\Debug\
 C:\Users\p.cairo.2224\Desktop\01_SocketUDP_Client\01_SocketUDP_Client\bin\Debug\01_SocketUDP_Client.pdb
 C:\Users\p.cairo.2224\Desktop\01_SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.exe
 C:\Users\p.cairo.2224\Desktop\01_SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.pdb
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\bin\Debug\01_SocketUDP_Client.exe.config
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\bin\Debug\01_SocketUDP_Client.exe
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\bin\Debug\01_SocketUDP_Client.pdb
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.csproj.AssemblyReference.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\_01_SocketUDP_Client.Form1.resources
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\_01_SocketUDP_Client.Properties.Resources.resources
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.csproj.GenerateResource.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.csproj.CoreCompileInputs.cache
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.exe
+C:\Users\edopi\OneDrive\Desktop\SCUOLA\GitHub\4-SISTEMI\Socket\01 - SocketUDP_Client\01_SocketUDP_Client\obj\Debug\01_SocketUDP_Client.pdb

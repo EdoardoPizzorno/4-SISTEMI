@@ -1,6 +1,23 @@
----- DA AGGIUNGERE PARTE VECCHIA ----
+FTDI --> chip nel cavo che permettere di connettere USB con porta seriale
 
 
+MONOMODALE --> singolo raggio luminoso (laser), viene usato il raggio ed è buono per lunghe distanze
+
+MULTIMODALE --> piccoli led-, meglio per brevi distanze
+
+
+POE (Power over Ethernet)
+La corrente elettrica passa nello stesso cavo della rete Ethernet.
+Esistono i "POE Injector" che da un lato permette di collegare il cavo dalla quale passa la corrente e rete e dall'altra ci sono 2 porte dalla quale in una passa la corrente e dall'altra la rete Ethernet.
+Esistono anche gli "Switch POE".
+
+POWERLINE
+Il contrario della POE, la rete Ethernet passa nello stesso cavo della corrente elettrica. (pensare ad esempio della postazione in garage)
+
+PONTE RADIO
+Come la connessione WiFi monodirezionale
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 SFP | SFP+ --> connettori
 

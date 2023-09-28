@@ -1,0 +1,23 @@
+---- DA AGGIUNGERE PARTE VECCHIA ----
+
+
+
+SFP | SFP+ --> connettori
+
+ROUTER --> serve a gestire + reti diverse per interconnetterle tra di loro
+SWITCH --> apparato attivo che serve a far comunicare i dispositivi in una rete locale
+
+UPS --> Uninterruptible Power Supply (Quantità di corrente ininterrotta), è una sorta di batteria che consente di avere energia extra per una decina di minuti in caso di mancanza di corrente. Vengono utilizzati anche negli ospedali (in maggiore quantità) per eventuali blackout
+ARMADI RACK --> altezza misurati in "unità rack", larghezza in pollici
+
+CLASSIFICAZIONE TIER
+Più si sale di tier, più si ha una maggiore sicurezza rispetto ai guasti.
+
+
+CARRIER --> operatore dotato di infrastuttura propria (Vodafone, Tim, Fastweb, ...). 
+	    ISP non Carrier --> "ho", ... (forniscono internet ma non hanno le loro infrastrutture)
+
+DARK FIBER --> fibre ottiche spente (fibre presenti che non vengono utilizzate, ma gia disponibili in caso di problemi)
+Internet Exchange --> reti all'interno del quale ogni operatore ha il suo IP e uno puo comunicare con l'altro (una volta comunicare tra operatori diversi costava)
+https://www.youtube.com/watch?v=cstqcc7MK6I
+
